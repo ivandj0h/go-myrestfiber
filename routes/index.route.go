@@ -6,5 +6,6 @@ import (
 )
 
 func RouteInit(r *fiber.App) {
-	r.Get("/", handler.UserReadHandler)
+	r.Get("/", handler.UserGetAllHandler)
+	r.Post("/", handler.UserCreateHandler)
 }
