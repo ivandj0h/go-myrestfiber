@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"github.com/gofiber/fiber/v2"
+	"ivandjoh.online/m/v2/routes"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+
+	app := fiber.New()
+
+	routes.RouteInit(app)
+
+	app.Listen(":2022")
 }
